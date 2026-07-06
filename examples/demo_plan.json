@@ -1,0 +1,27 @@
+{
+  "name": "demo",
+  "artifactsDir": "artifacts",
+  "vars": {
+    "BASE_URL": "https://www.bing.com/",
+    "KEYWORD": "瑞幸咖啡"
+  },
+  "browser": {
+    "channel": "chromium",
+    "headless": false,
+    "slowMoMs": 0,
+    "args": []
+  },
+  "context": {
+    "viewport": { "width": 1280, "height": 720 }
+  },
+  "tests": [
+    {
+      "name": "bing_search",
+      "steps": [
+        { "action": "goto", "url": "${BASE_URL}/search?q=${KEYWORD}", "waitUntil": "commit" },
+        { "action": "wait", "ms": 5000 },
+        { "action": "screenshot", "path": "bing_search.png", "fullPage": true }
+      ]
+    }
+  ]
+}
