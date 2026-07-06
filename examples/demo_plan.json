@@ -1,5 +1,5 @@
 {
-  "name": "bing_searchs",
+  "name": "demo",
   "artifactsDir": "artifacts",
   "vars": {
     "BASE_URL": "https://www.bing.com",

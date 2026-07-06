@@ -9,13 +9,13 @@
 项目当前只有一个运行时依赖：
 
 ```bash
-.conda/bin/python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 安装 Playwright 浏览器：
 
 ```bash
-.conda/bin/python -m playwright install chromium
+python -m playwright install chromium
 ```
 
 如果你希望使用 Chrome 或 Edge 通道，也可以额外安装对应浏览器，并在计划文件或命令行里指定 `--channel`。
@@ -25,25 +25,25 @@
 列出计划中的测试：
 
 ```bash
-.conda/bin/python -m web_pilot list --plan examples/demo_plan.json
+python -m web_pilot list --plan examples/demo_plan.json
 ```
 
 运行整个计划并保存 Trace：
 
 ```bash
-.conda/bin/python -m web_pilot run --plan examples/demo_plan.json --trace
+python -m web_pilot run --plan examples/demo_plan.json --trace
 ```
 
 按名称只运行单个测试：
 
 ```bash
-.conda/bin/python -m web_pilot run --plan examples/demo_plan.json --only bing_search
+python -m web_pilot run --plan examples/demo_plan.json --only bing_search
 ```
 
 覆盖计划内变量：
 
 ```bash
-.conda/bin/python -m web_pilot run \
+python -m web_pilot run \
   --plan examples/demo_plan.json \
   --var KEYWORD=Playwright \
   --var BASE_URL=https://www.bing.com
@@ -52,7 +52,7 @@
 当步骤里的 `url` 以 `/` 开头时，可以通过 `--base-url` 拼接完整地址：
 
 ```bash
-.conda/bin/python -m web_pilot run \
+python -m web_pilot run \
   --plan examples/demo_plan.json \
   --base-url https://example.com
 ```
@@ -62,21 +62,13 @@
 顶层命令：
 
 ```bash
-.conda/bin/python -m web_pilot --help
-```
-
-```text
-usage: web-pilot [-h] {run,list} ...
+python -m web_pilot --help
 ```
 
 ### `list`
 
 ```bash
-.conda/bin/python -m web_pilot list --help
-```
-
-```text
-usage: web-pilot list [-h] --plan PLAN [--var VAR]
+python -m web_pilot list --help
 ```
 
 参数说明：
@@ -87,13 +79,7 @@ usage: web-pilot list [-h] --plan PLAN [--var VAR]
 ### `run`
 
 ```bash
-.conda/bin/python -m web_pilot run --help
-```
-
-```text
-usage: web-pilot run [-h] --plan PLAN [--base-url BASE_URL] [--headed]
-                     [--headless] [--channel CHANNEL] [--trace]
-                     [--timeout-ms TIMEOUT_MS] [--only ONLY] [--var VAR]
+python -m web_pilot run --help
 ```
 
 参数说明：
@@ -256,4 +242,4 @@ artifacts/<plan.name>/<test.name>/
 - 打开 Bing 搜索结果页
 - 搜索关键词 `瑞幸咖啡`
 - 等待 5 秒
-- 保存整页截图到 `artifacts/bing_searchs/bing_search/bing_search.png`
+- 保存整页截图到 `artifacts/demo/bing_search/bing_search.png`
