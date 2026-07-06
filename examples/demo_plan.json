@@ -18,8 +18,12 @@
     {
       "name": "bing_search",
       "steps": [
-        { "action": "goto", "url": "${BASE_URL}/search?q=${KEYWORD}", "waitUntil": "commit" },
-        { "action": "wait", "ms": 5000 },
+        { "action": "goto", "url": "${BASE_URL}", "waitUntil": "commit" },
+        { "action": "wait_for_selector", "selector": "#sb_form_q", "state": "visible" },
+        { "action": "type", "selector": "#sb_form_q", "text": "${KEYWORD}", "delayMs": 500 },
+        { "action": "wait", "ms": 2000 },
+        { "action": "press", "selector": "#sb_form_q", "key": "Enter" },
+        { "action": "wait", "ms": 2000 },
         { "action": "screenshot", "path": "bing_search.png", "fullPage": true }
       ]
     }
