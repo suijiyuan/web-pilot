@@ -1,8 +1,8 @@
 {
-  "name": "demo",
+  "name": "bing_searchs",
   "artifactsDir": "artifacts",
   "vars": {
-    "BASE_URL": "https://www.bing.com/",
+    "BASE_URL": "https://www.bing.com",
     "KEYWORD": "瑞幸咖啡"
   },
   "browser": {

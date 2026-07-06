@@ -143,7 +143,7 @@ artifacts/<plan.name>/<test.name>/
   "artifactsDir": "artifacts",
   "vars": {
     "BASE_URL": "https://www.bing.com/",
-    "KEYWORD": "蜜雪冰城"
+    "KEYWORD": "瑞幸咖啡"
   },
   "browser": {
     "channel": "chromium",
@@ -254,6 +254,6 @@ artifacts/<plan.name>/<test.name>/
 仓库内置示例文件为 `examples/demo_plan.json`，当前行为是：
 
 - 打开 Bing 搜索结果页
-- 搜索关键词 `蜜雪冰城`
+- 搜索关键词 `瑞幸咖啡`
 - 等待 5 秒
-- 保存整页截图到 `artifacts/demo/bing_search/bing_search.png`
+- 保存整页截图到 `artifacts/bing_searchs/bing_search/bing_search.png`
