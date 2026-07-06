@@ -102,7 +102,7 @@ usage: web-pilot run [-h] --plan PLAN [--base-url BASE_URL] [--headed]
 - `--base-url BASE_URL`：用于补全以 `/` 开头的 `goto.url`
 - `--headed`：强制有头模式
 - `--headless`：强制无头模式
-- `--channel CHANNEL`：覆盖计划中的浏览器通道，如 `chromium`、`chrome`、`msedge`
+- `--channel CHANNEL`：覆盖计划中的浏览器通道，如 `chrome`、`msedge`、`chromium`
 - `--trace`：为每个测试保存 `trace.zip`
 - `--timeout-ms TIMEOUT_MS`：页面操作与断言默认超时，单位毫秒，默认 `30000`
 - `--only ONLY`：只运行指定测试名，可重复传入
@@ -142,7 +142,7 @@ artifacts/<plan.name>/<test.name>/
   "name": "demo",
   "artifactsDir": "artifacts",
   "vars": {
-    "BASE_URL": "https://www.bing.com/",
+    "BASE_URL": "https://www.bing.com",
     "KEYWORD": "瑞幸咖啡"
   },
   "browser": {
